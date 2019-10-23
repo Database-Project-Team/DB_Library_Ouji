@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/order', 'ControllerSystem@showData');
+Route::get('/orders', 'ControllerSystem@index');
+Route::get('/order/edit/{no}', 'ControllerSystem@edit_index');
+Route::put('/order/edit/update/{no}', 'ControllerSystem@update');
